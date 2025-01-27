@@ -74,7 +74,7 @@ Contributing:
       Follow these steps to set up and run the project locally:
           1. Clone the Repository:
           2. Set Up the Database: 
-                -Import the office.sql into your My SQL database.
+                -Import the office.sql file into your My SQL database.
                 -Update the credentials in index.php and dashboard.php.
           3. Execution:
                 -Now place the files(index.php, dashboard.php, login.php, styles.css, lstyles.css, dstyles.css) in any                        directory.
