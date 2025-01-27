@@ -1,7 +1,7 @@
 <?php
 session_start(); // Start the session
 
-$conn = new mysqli('localhost', 'root', 'Pk3745st@', 'office'); // Database connection
+$conn = new mysqli('localhost', 'root', '', 'office'); // Database connection
 
 // Handle login form submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
