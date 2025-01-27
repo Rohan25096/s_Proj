@@ -10,7 +10,7 @@ if (!isset($_SESSION['admin'])) {
 // Database connection
 $servername = "localhost";
 $username = "root";
-$password = "Pk3745st@";
+$password = "";
 $dbname = "office";
 
 // Create connection
