@@ -7,6 +7,17 @@ body {
     color: #333;
 }
 
+/* Centered Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Header Styles */
 h1 {
     text-align: center;
@@ -22,132 +33,60 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Container */
-.container {
-    width: 45%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    border:#e74c3c;
-}
-
-
-/* Dashboard Button Styles */
-.dashboard { 
-    position: absolute;
-    top: 20px;
-    left: 40px;
-}
-
-.dashboard form button {
-    background-color: #044a8c;
-    color: white;
-    font-size: 0.9rem; /* Reduced font size for a smaller button */
-    padding: 5px 10px; /* Smaller padding for a compact look */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.dashboard form button:hover {
-    background-color: #044a8c;
-    transform: translateY(-2px);
-}
-
-.dashboard form button:active {
-    transform: translateY(1px);
-}
-
-
-/* Logout Button Styles */
-.logout {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.logout form button {
-    background-color: #e74c3c;
-    color: white;
-    font-size: 0.9rem; /* Reduced font size for a smaller button */
-    padding: 5px 10px; /* Smaller padding for a compact look */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.logout form button:hover {
-    background-color: #c0392b;
-    transform: translateY(-2px);
-}
-
-.logout form button:active {
-    transform: translateY(1px);
-}
-
-
-/* Form Sections */
+/* Form Section */
 .form-section {
-    background: #ffffff;
-    margin: 20px 0;
-    padding: 25px 30px;
-    border:#333;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 40px;
-    transition: transform 0.2s ease;
 }
 
-.form-section:hover {
-    transform: translateY(-3px);
-}
-
-.form-section h2 {
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
-/* Forms */
+/* Form Layout */
 form {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 15px;
-    width: 200px;    /* ? ? */
+    justify-content: space-between;
+}
+
+/* Two-column layout */
+.form-row {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
 }
 
 form input[type="text"],
 form input[type="file"],
 form input[type="date"],
-form input[readonly],
-form button {
+form input[type="email"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 10px;
     font-size: 1rem;
-    padding: 12px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background: #f9f9f9;
+    transition: 0.3s ease;
 }
 
-form input[type="text"]:focus,
-form input[type="file"]:focus,
-form input[type="date"]:focus {
+/* Input Focus Effect */
+form input:focus,
+form select:focus {
+    outline: none;
     border-color: #4CAF50;
     box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
-    outline: none;
 }
 
-form input[readonly] {
-    cursor: not-allowed;
-    background-color: #eaeaea;
-}
-
+/* Buttons */
 form button {
+    width: 100%;
     background-color: #4CAF50;
     color: white;
-    border: none;
-    cursor: pointer;
     font-weight: bold;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -160,29 +99,99 @@ form button:active {
     transform: translateY(1px);
 }
 
-/* Fetch Section */
-.fetch-section {
-    margin-top: 40px;
+/* Photo Upload Section - Smaller & Properly Positioned */
+.photo-upload {
+    width: 120px; /* Reduced size */
+    height: 140px; /* Maintain aspect ratio */
     text-align: center;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #fdfdfd;
+    position: absolute;
+    right: 70px; /* Adjusted positioning */
+    top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.fetch-section input {
-    width: 50%;
-    margin-bottom: 10px;
+/* Fix Image Preview */
+.photo-upload img {
+    width: 100px; /* Adjusted size */
+    height: 120px; /* Keep proportional */
+    object-fit: cover; /* Ensures it fills the space */
+    border-radius: 5px;
+    display: none; /* Hide initially */
+}
+
+/* File Input Styling */
+.photo-upload input[type="file"] {
+    width: 100%;
+    font-size: 0.7rem; /* Smaller font */
+}
+
+
+
+/* Navigation Buttons */
+.navigation-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navigation-buttons button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.navigation-buttons button:active {
+    transform: translateY(1px);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    form input[type="text"],
-    form input[type="file"],
-    form input[type="date"],
-    form input[readonly],
-    form button {
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    .fetch-section input {
+    .form-row {
         width: 100%;
     }
+
+    .photo-upload {
+        position: static;
+        margin: 20px auto;
+        width: 200px;
+    }
+}
+
+/*Placeholder for dates*/
+
+input[type="date"]::before {
+    content: attr(placeholder);
+    color: #999;
+    margin-right: 10px;
+}
+input[type="date"]:focus::before {
+    content: "";
+}
+
+/*Placeholder for photo*/
+
+input[type="file"]::before {
+    content: attr(placeholder);
+    color: #999;
+    margin-right: 10px;
+}
+input[type="file"]:focus::before {
+    content: "";
 }
