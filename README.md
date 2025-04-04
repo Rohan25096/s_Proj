@@ -1,50 +1,70 @@
-Employee Records Management System
-A web-based Employee Records Management System that allows users to manage employee details efficiently, view PDF documents, calculate retirements automatically, and analyze employee data with an interactive dashboard.
+#  Employee Records Management System  
+A web-based **Employee Records Management System** that allows users to efficiently **manage employee details**, **view PDF documents**, **automatically calculate retirements**, and **analyze employee data** through an interactive dashboard.
 
+---
 
-Features:
-  1.Employee Management
-      i> Add new employee records with:
-            Employee Name, Code, Date of Joining, Contact No, Aadhar No, PAN No.
-      ii> Upload associated PDF documents.
-      iii> Automatic calculation of retirement date (60 years from Date of Birth).
-  2.PDF Fetching
-      i> Retrieve and view PDF files associated with employees by their unique Employee Code.
+##  Features  
 
-  3.Dashboard
-      i> Visualize Total Employees, Active Employees, and Retired Employees using Charts.js.
-      ii> Gain insights into employee statuses via dynamic and interactive graphs.
+### 1️ **Employee Management**  
+- Add new employee records with:  
+  - Employee Name, Code, Date of Joining, Contact No, Aadhar No, PAN No.  
+- Upload associated **PDF documents**.  
+- Automatically **calculate the retirement date** (60 years from Date of Birth).  
 
-  4.Secure Login System
-      i> Hashed passwords using bcrypt for security.
-      ii> Prevent unauthorized access to the admin functionalities.
-  5.Responsive Design
-      i> Works seamlessly across devices, from desktops to mobile phones.
+### 2️ **PDF Fetching**  
+- Retrieve and view **PDF files** associated with employees using their **unique Employee Code**.  
 
+### 3️ **Dashboard**  
+- **Visualize employee data** using **Charts.js**:  
+  - Total Employees  
+  - Active Employees  
+  - Retired Employees  
+- Get **insights into employee statistics** via **dynamic and interactive graphs**.  
 
-Technology Stack:
-  1. Frontend: HTML,CSS and Charts.js for data visualization.
-  2. Backend: PHP for backend logic.
-  3. Database: My SQL for storing employee details and pdf files.
+### 4️ **Secure Login System**  
+- **Hashed passwords** using **bcrypt** for security.  
+- **Prevents unauthorized access** to admin functionalities.  
 
+### 5️ **Responsive Design**  
+- Works seamlessly across **desktops, tablets, and mobile devices**.  
 
-Dashboard Preview:
-  Display metrics like Active employees vs Retired employees.
+---
 
+##  Dashboard Preview  
+- Displays **metrics** like **Active Employees vs Retired Employees**.  
 
-Future Enhancements:
-    1. Search and Filter option:
-          - Search Employees by name, department or birth date.
-          - Filter by active or retired status.
-    2. Email Notifications:
-          - Notify HR when a employee is nearing retirement.
-    3. Export Data:
-          - Allow exporting employee data as EXCEL/CSV file.
+---
 
-Security:
-    1. Passwords are hashed using bycrypt for secure storages.
-    2. SQL queries are prepared statements to prevent SQL injection.
+##  Technology Stack  
 
+| Component  | Technology Used |
+|------------|----------------|
+| **Frontend**  | HTML, CSS, **Charts.js** (for data visualization) |
+| **Backend**   | PHP |
+| **Database**  | MySQL (for storing employee details and PDF files) |
+
+---
+
+##  Future Enhancements  
+
+1. **Search & Filter Options**  
+   - Search Employees by **name, department, or birth date**.  
+   - Filter by **Active or Retired** status.  
+
+2. **Email Notifications**  
+   - Notify HR when an employee is **nearing retirement**.  
+
+3. **Export Data**  
+   - Export employee data as **EXCEL/CSV**.  
+
+---
+
+##  Security Measures  
+
+1. **Passwords are securely hashed** using `bcrypt`.  
+2. **SQL queries use prepared statements** to prevent SQL injection.  
+
+---
 
 Contributing:
     We welcome contributions. Feel free to contribute!!
